@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tache de convertissuer</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Convertisseur de monnaie by hafssa</h1>
+    <form action="#">
+        <fieldset>
+            <legend>Convertisseur de monnaie</legend>
+            <br>
+            <label for="mdh">Montant en DH :</label>
+            <input id="mdh" type="text">
+            <output id="outErrMdh"></output>  
+            <br><br>
+            <label for="convertion">Convertir en :</label>
+            <select name="convertion" id="devise">
+                <option value="euro" selected>EURO</option>
+                <option value="dollar">DOLLAR</option>
+            </select>  
+            <br><br>
+            <label for="resultat">Résultat :</label>
+            <input id="resultat" type="text" readonly disabled>
+            <br><br>
+            <button type="button" onclick="conertir();">Calculer</button>
+            <button type="button" onclick="initialiser();">Effacer</button>
+            <br>
+        </fieldset>
+        
+    </form>
+</body>
+</html>
